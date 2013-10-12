@@ -1,0 +1,20 @@
+<h1>Welcome to the Anonymous Blog!</h1>
+
+<table>
+  <tr>
+    <th>Here are the POSTS!!</th>
+  </tr>
+
+  <% @posts.each do |post|  %>
+  <tr>
+    <td>
+      <a href="/posts/<%= post.id %>">
+        <%= post.title %>
+      </a>
+    </td>
+  </tr>
+  <% end %>
+
+
+
+</table>
