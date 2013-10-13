@@ -14,15 +14,15 @@ get '/post/new' do
 end
 
 post '/post/new' do
-  @post = Post.create(params[:post])
   if @post.valid? 
-    redirect to('/posts')
+    erb :posts
   else
     erb :post_new
   end
 end
 
 post '/posts' do
-  p @posts = Post.all
-  erb :posts
+  params.inspect
+  # @post = Post.create(params[:post])
+  # erb :posts
 end
