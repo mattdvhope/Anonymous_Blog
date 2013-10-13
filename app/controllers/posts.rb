@@ -5,7 +5,7 @@ get '/posts' do
 end
 
 post '/posts' do
-  @post = Post.create(:title => params[:title], :body => params[:body])
+  erb :posts
 end
 
 get '/posts/:id' do
@@ -13,4 +13,11 @@ get '/posts/:id' do
   erb :post_show
 end
 
+get '/post/new' do
+  erb :post_new
+end
 
+post '/post/new' do
+  @post = Post.create(:title => params[:title], :body => params[:body])
+  erb :post_new
+end

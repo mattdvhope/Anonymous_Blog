@@ -1,0 +1,14 @@
+<h1>Make a new post here!</h1><br>
+
+<form action="/post/new" method="POST" >
+  <div>
+    <h2>Type in the name of your new post:</h2><br>
+    <input type="text" name="name" value=<%=@post%>>
+    <input type="text" name="email" value=<%=@post%>>
+
+    <br>
+    <input type="submit" value="Submit">
+  </div>
+</form>
+
+
