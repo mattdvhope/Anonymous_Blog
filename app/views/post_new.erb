@@ -1,0 +1,18 @@
+<h1>Make a new post here!</h1>
+
+<form action="/post/new" method="POST" >
+  <h2>Type in the name of your new post:</h2>
+    <div>
+      <label for="title">Title: </label>
+      <input id="title" type="text" name="post[title]">
+    </div>
+    <div>
+      <label for="body">Body: </label>
+      <input id="body" type="text" name="post[body]">
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+</form>
+
+
