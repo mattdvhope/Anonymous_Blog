@@ -1,6 +1,6 @@
 
 get '/' do
-  # Look in app/views/index.erb
+  @posts = Post.order('title ASC')
   erb :index
 end
 
