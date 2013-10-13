@@ -5,7 +5,7 @@ get '/posts' do
 end
 
 post '/posts' do
-  erb :posts
+  puts params.inspect
 end
 
 get '/posts/:id' do
@@ -14,11 +14,15 @@ get '/posts/:id' do
 end
 
 get '/post/new' do
-  p "Hello"
+  @post = Post.new(params[:post])
   erb :post_new
 end
 
-post '/post/new' do
-  @post = Post.create(:title => params[:title], :body => params[:body])
-  erb :posts
+post '/posts' do
+  @post = Post.new(params[:post])
+  if @post.save 
+    redirect to('/')
+  else
+    erb :post_new
+  end
 end
