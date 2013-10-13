@@ -4,6 +4,3 @@ get '/' do
   erb :index
 end
 
-post '/post/new' do
-  
-end

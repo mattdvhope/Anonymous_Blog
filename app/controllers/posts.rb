@@ -14,10 +14,11 @@ get '/posts/:id' do
 end
 
 get '/post/new' do
+  p "Hello"
   erb :post_new
 end
 
 post '/post/new' do
   @post = Post.create(:title => params[:title], :body => params[:body])
-  erb :post_new
+  erb :posts
 end
